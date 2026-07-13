@@ -131,12 +131,11 @@ padding:18px 60px;
 
 .logo img{
 
-height:55px;
-
-transition:.5s;
+height:48px;
+width:auto;
+display:block;
 
 }
-
 .logo img:hover{
 
 transform:scale(1.08);
@@ -233,23 +232,20 @@ Hero
 ======================= */
 
 .hero{
+    min-height:100vh;
+    max-width:1400px;
+    margin:auto;
 
-min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
 
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-padding:120px 8%;
-
+    padding:130px 60px 80px;
 }
 
 .hero-left{
-
-width:50%;
-
+    max-width:650px;
 }
 
 .hero-left h4{
@@ -352,15 +348,9 @@ background:var(--primary);
 }
 
 .hero-right{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-width:45%;
-
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .hero-right img{
@@ -764,5 +754,77 @@ grid-template-columns:1fr;
 width:280px;
 
 }
+
+}
+#gaming,
+#about,
+.newsletter,
+#contact{
+
+padding:100px 8%;
+text-align:center;
+
+}
+
+#gaming h2,
+#about h2,
+.newsletter h2,
+#contact h2{
+
+font-size:42px;
+margin-bottom:25px;
+
+}
+
+#gaming p,
+#about p,
+.newsletter p{
+
+max-width:700px;
+margin:auto;
+line-height:32px;
+color:var(--grey);
+
+}
+
+.newsletter input,
+#contact input,
+#contact textarea{
+
+width:min(600px,100%);
+padding:18px;
+margin:15px auto;
+display:block;
+
+background:#111;
+color:white;
+
+border:1px solid rgba(255,255,255,.1);
+
+border-radius:12px;
+
+font-family:Poppins;
+
+}
+
+.newsletter button,
+#contact button,
+.explore{
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+
+color:white;
+
+cursor:pointer;
+
+font-size:16px;
+
+margin-top:20px;
 
 }
