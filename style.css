@@ -515,6 +515,31 @@ filter:drop-shadow(0 0 35px rgba(122,0,255,.5));
     font-size:1rem;
     line-height:1.6;
 }
+/* ===========================
+   FEATURE CARD ICONS
+=========================== */
+
+.feature-icon{
+    font-size:3rem;
+    margin-bottom:22px;
+    color:#d8d8d8;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.15),
+        0 0 15px rgba(130,0,255,.4);
+
+    transition:.4s ease;
+}
+
+.feature-card:hover .feature-icon{
+    color:#ffffff;
+    transform:translateY(-4px) scale(1.1);
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #8c3cff,
+        0 0 35px #8c3cff;
+}
 /* =======================
 Products
 ======================= */
