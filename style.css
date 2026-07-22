@@ -107,7 +107,7 @@ z-index:999;
 
 backdrop-filter:blur(18px);
 
-background:rgba(5,5,5,.60);
+background:rgba(5,5,5,.95);
 
 border-bottom:1px solid rgba(255,255,255,.05);
 
@@ -241,7 +241,7 @@ Hero
     align-items:center;
     gap:80px;
 
-    padding:130px 60px 80px;
+    padding:185px 60px 80px;
 }
 
 .hero-left{
@@ -835,16 +835,18 @@ margin-top:20px;
 ========================== */
 
 .announcement-bar{
-    width:100%;
-    background:linear-gradient(90deg,#7a0000,#ff0000,#7a0000);
+    position: fixed;
+    top: 85px;          /* just below the navbar */
+    left: 0;
+    width: 100%;
+    z-index: 998;
+
+    background: linear-gradient(90deg,#7a0000,#ff0000,#7a0000);
     color:#fff;
     overflow:hidden;
     padding:12px 0;
-    position:relative;
     white-space:nowrap;
     box-shadow:0 0 20px rgba(255,0,0,.35);
-    border-top:1px solid rgba(255,255,255,.08);
-    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .announcement-content{
