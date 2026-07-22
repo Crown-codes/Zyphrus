@@ -808,32 +808,34 @@ font-family:Poppins;
 }
 
 .newsletter button,
-#contact button,
+#contact button{
+
+padding:15px 40px;
+border:none;
+border-radius:40px;
+background:linear-gradient(90deg,var(--primary),var(--secondary));
+color:white;
+cursor:pointer;
+font-size:16px;
+margin-top:20px;
+transition:.35s ease;
+}
+
 .explore{
 
 display:inline-block;
-
 padding:15px 40px;
-
-border:none;
-
-border-radius:40px;
+margin-top:20px;
 
 background:linear-gradient(90deg,var(--primary),var(--secondary));
 
-color:white;
+border-radius:40px;
+
+color:#fff;
 text-decoration:none;
 
-cursor:pointer;
-
-font-size:16px;
-
-margin-top:20px;
-
 transition:.35s ease;
-
 }
-
 .explore:hover{
     transform:translateY(-4px);
     box-shadow:0 15px 30px rgba(122,0,255,.35);
