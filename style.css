@@ -1064,54 +1064,144 @@ transition:.35s ease;
     background:linear-gradient(to left,#050505,transparent);
 }
 /* =========================================
-   LOGIN BUTTON - HEADER
+   ZYPHRUS SCI-FI LOGIN BUTTON
    ========================================= */
 
 .login-link {
+    position: relative;
+
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    gap: 9px;
 
     margin-left: 25px;
-    padding: 9px 18px;
+    padding: 12px 28px;
+
+    min-width: 140px;
 
     color: #ffffff !important;
-
     text-decoration: none;
 
-    border: 1px solid #7A00FF;
-    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .5px;
 
-    background: rgba(122, 0, 255, 0.08);
+    /* Dark metallic interior */
+    background:
+        linear-gradient(
+            145deg,
+            #242424 0%,
+            #111111 45%,
+            #080808 100%
+        );
 
-    box-shadow:
-        0 0 10px rgba(122, 0, 255, 0.15);
-
-    transition: 0.3s ease;
-}
-
-.login-link i {
-    color: #a855ff;
-}
-
-.login-link:hover {
-    color: #ffffff !important;
-
-    background: linear-gradient(
-        135deg,
-        #7A00FF,
-        #d000ff
+    /* Angular sci-fi shape */
+    clip-path: polygon(
+        12px 0,
+        calc(100% - 12px) 0,
+        100% 12px,
+        100% calc(100% - 12px),
+        calc(100% - 12px) 100%,
+        12px 100%,
+        0 calc(100% - 12px),
+        0 12px
     );
 
-    border-color: #b85cff;
+    transition: .35s ease;
 
-    box-shadow:
-        0 0 15px rgba(122, 0, 255, 0.6),
-        0 0 30px rgba(122, 0, 255, 0.2);
-
-    transform: translateY(-2px);
+    /* Purple glow */
+    filter:
+        drop-shadow(0 0 6px rgba(122,0,255,.55))
+        drop-shadow(0 0 15px rgba(122,0,255,.20));
 }
 
-.login-link:hover i {
+/* Neon border */
+.login-link::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7A00FF,
+            #d000ff,
+            #7A00FF
+        );
+
+    clip-path: polygon(
+        12px 0,
+        calc(100% - 12px) 0,
+        100% 12px,
+        100% calc(100% - 12px),
+        calc(100% - 12px) 100%,
+        12px 100%,
+        0 calc(100% - 12px),
+        0 12px
+    );
+
+    z-index: -2;
+}
+
+/* Dark inner layer */
+.login-link::after {
+    content: "";
+
+    position: absolute;
+    inset: 2px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #292929,
+            #111111 50%,
+            #080808
+        );
+
+    clip-path: polygon(
+        11px 0,
+        calc(100% - 11px) 0,
+        100% 11px,
+        100% calc(100% - 11px),
+        calc(100% - 11px) 100%,
+        11px 100%,
+        0 calc(100% - 11px),
+        0 11px
+    );
+
+    z-index: -1;
+}
+
+/* User icon */
+.login-link i {
     color: #ffffff;
+
+    font-size: 17px;
+
+    text-shadow:
+        0 0 7px #7A00FF;
+
+    transition: .35s ease;
+}
+
+/* Hover */
+.login-link:hover {
+    transform: translateY(-2px) scale(1.03);
+
+    filter:
+        drop-shadow(0 0 8px #7A00FF)
+        drop-shadow(0 0 22px rgba(122,0,255,.65));
+}
+
+/* Hover icon */
+.login-link:hover i {
+    color: #d9a8ff;
+
+    transform: scale(1.12);
+
+    text-shadow:
+        0 0 8px #7A00FF,
+        0 0 18px #d000ff;
 }
