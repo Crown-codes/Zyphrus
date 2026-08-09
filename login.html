@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZYPHRUS | Login</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="login-page">
+
+    <main class="login-container">
+
+        <div class="login-card">
+
+            <!-- HUD corners -->
+            <span class="hud-corner top-left"></span>
+            <span class="hud-corner top-right"></span>
+            <span class="hud-corner bottom-left"></span>
+            <span class="hud-corner bottom-right"></span>
+
+            <!-- Mechanical bolts -->
+            <span class="bolt bolt-1"></span>
+            <span class="bolt bolt-2"></span>
+            <span class="bolt bolt-3"></span>
+            <span class="bolt bolt-4"></span>
+
+            <!-- Logo -->
+            <div class="login-logo">
+                <img src="images/logo.png" alt="ZYPHRUS">
+            </div>
+
+            <div class="login-heading">
+                <span class="login-line"></span>
+                <h1>USER LOGIN</h1>
+                <span class="login-line"></span>
+            </div>
+
+            <p class="login-subtitle">
+                ACCESS THE ZYPHRUS SYSTEM
+            </p>
+
+            <!-- Login Form -->
+            <form id="loginForm">
+
+                <div class="input-group">
+                    <label for="username">
+                        <i class="fa-solid fa-user"></i>
+                        USERNAME
+                    </label>
+
+                    <div class="input-box">
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter username"
+                            required
+                        >
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <label for="password">
+                        <i class="fa-solid fa-lock"></i>
+                        PASSWORD
+                    </label>
+
+                    <div class="input-box">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter password"
+                            required
+                        >
+
+                        <button type="button"
+                                class="password-toggle"
+                                id="togglePassword">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="login-button">
+                    <span>INITIALIZE LOGIN</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+            <div class="login-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
