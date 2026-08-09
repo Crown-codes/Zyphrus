@@ -430,20 +430,22 @@
 }
 
 
-/* -----------------------------------------
-   HUD CORNERS
-   ----------------------------------------- */
+/* =========================================
+   SCI-FI HUD FRAME
+   ========================================= */
 
 .hud-corner {
     position: absolute;
 
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
 
     z-index: 3;
 
     pointer-events: none;
 }
+
+/* Horizontal + vertical neon lines */
 
 .hud-corner::before,
 .hud-corner::after {
@@ -454,96 +456,107 @@
     background: #7A00FF;
 
     box-shadow:
-        0 0 8px rgba(122, 0, 255, 0.7);
+        0 0 6px #7A00FF,
+        0 0 14px rgba(122,0,255,.7);
 }
-
 
 /* Horizontal */
 
 .hud-corner::before {
     width: 100%;
-    height: 1px;
-}
+    height: 2px;
 
+    top: 0;
+    left: 0;
+}
 
 /* Vertical */
 
 .hud-corner::after {
-    width: 1px;
+    width: 2px;
     height: 100%;
+
+    top: 0;
+    left: 0;
 }
 
-
-/* Positions */
+/* Corner positions */
 
 .top-left {
-    top: 12px;
-    left: 12px;
+    top: 14px;
+    left: 14px;
 }
 
 .top-right {
-    top: 12px;
-    right: 12px;
+    top: 14px;
+    right: 14px;
+
     transform: rotate(90deg);
 }
 
 .bottom-left {
-    bottom: 12px;
-    left: 12px;
+    bottom: 14px;
+    left: 14px;
+
     transform: rotate(-90deg);
 }
 
 .bottom-right {
-    bottom: 12px;
-    right: 12px;
+    bottom: 14px;
+    right: 14px;
+
     transform: rotate(180deg);
 }
 
-
-/* -----------------------------------------
+/* =========================================
    MECHANICAL BOLTS
-   ----------------------------------------- */
+   ========================================= */
 
 .bolt {
     position: absolute;
 
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
 
     border-radius: 50%;
 
-    background: #292929;
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #777,
+            #292929 45%,
+            #090909 100%
+        );
 
-    border: 1px solid #555;
+    border: 1px solid #666;
 
     box-shadow:
-        inset 0 1px 2px rgba(255,255,255,0.2),
-        0 0 4px rgba(0,0,0,0.8);
+        inset 0 1px 2px rgba(255,255,255,.25),
+        inset 0 -2px 2px rgba(0,0,0,.8),
+        0 0 5px rgba(0,0,0,.9);
 
     z-index: 4;
 }
 
-
 .bolt-1 {
-    top: 16px;
-    left: 16px;
+    top: 17px;
+    left: 17px;
 }
 
 .bolt-2 {
-    top: 16px;
-    right: 16px;
+    top: 17px;
+    right: 17px;
 }
 
 .bolt-3 {
-    bottom: 16px;
-    left: 16px;
+    bottom: 17px;
+    left: 17px;
 }
 
 .bolt-4 {
-    bottom: 16px;
-    right: 16px;
+    bottom: 17px;
+    right: 17px;
 }
-
 
 /* -----------------------------------------
    MOBILE
